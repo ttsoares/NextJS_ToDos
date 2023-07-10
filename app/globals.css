@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-size: 18px;
+  --bg_start: hsl(192, 100%, 67%);
+  --bg_end: hsl(280, 87%, 65%);
+}
+
+.claro {
+  --c_blue: hsl(236, 33%, 92%);
+  --g_blue: hsl(233, 11%, 84%);
+  --dg_blue: hsl(236, 9%, 61%);
+  --vg_blue: hsl(235, 19%, 35%);
+  --hover_blue: hsl(235, 24%, 19%);
+  --dark_light: hsl(235, 72%, 85%);
+}
+
+.escuro {
+  --c_blue: hsl(235, 24%, 19%);
+  --g_blue: hsl(234, 39%, 85%);
+  --dg_blue: hsl(234, 11%, 52%);
+  --vg_blue: hsl(237, 14%, 26%);
+  --hover_blue: hsl(235, 19%, 35%);
+  --dark_light: hsl(235, 12%, 8%);
+}
