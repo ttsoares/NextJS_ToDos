@@ -59,6 +59,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - [Next.js](https://nextjs.org/) - React framework
 - [TailwindCSS](https://tailwindcss.com) - CSS framework
 - [React Drag&Drop](https://www.npmjs.com/package/react-beautiful-dnd) - DnD package
+- [NextJS Themes](https://www.npmjs.com/package/next-themes) - CSS themes for nextJS
 
 **Note: These are just examples. Delete this note and replace the list above with your own choices**
 
