@@ -16,43 +16,37 @@ import cross from "../public/images/icon-cross.svg";
 const startTodos = [
   {
     id: "item-1",
-    content: "1111 11111 111 11111 111 111",
-    active: true,
-    completed: false,
+    content: "Complete entire javaScript course ",
+    active: false,
+    completed: true,
   },
   {
     id: "item-2",
-    content: "2222 22 2222 222 2 22 222 22",
+    content: "Jog around the park 3x",
     active: false,
     completed: false,
   },
   {
     id: "item-3",
-    content: "333 33 3333 33 33 3  33333 3",
-    active: true,
-    completed: true,
+    content: "10 minutes meditation",
+    active: false,
+    completed: false,
   },
   {
     id: "item-4",
-    content: "444 44 4 44 444444 44 44 444",
+    content: "Read for 1 hour",
     active: false,
-    completed: true,
+    completed: false,
   },
   {
     id: "item-5",
-    content: "555 55 55 555 55 5555 55 555",
-    active: true,
-    completed: true,
+    content: "Pick up groceries",
+    active: false,
+    completed: false,
   },
   {
     id: "item-6",
-    content: "66666 666 66 666 6  6 6 6666",
-    active: true,
-    completed: true,
-  },
-  {
-    id: "item-7",
-    content: "777 77 7777 77 77 777 7777 7",
+    content: "Complete Todo App on Frontend Mentor",
     active: false,
     completed: false,
   },
@@ -184,7 +178,6 @@ export default function Home() {
       className={`${theme} bg-t-dark_light flex h-full flex-col items-center justify-center w-full`}
     >
       {/* Header image */}
-      {console.table("backTodos", backTodos)}
       {theme === "dark" ? (
         <div
           className={`${theme} w-full h-52 bg-bg-mob-d md:bg-bg-dsk-d bg-no-repeat bg-cover`}
@@ -228,7 +221,7 @@ export default function Home() {
           <form onSubmit={handleSubmit} className="w-full">
             <input
               className={`${theme} ml-2 w-11/12 md:w-[95%] bg-t-vg_blue border-none`}
-              label="Create a new ToDo"
+              placeholder="Create a new todo..."
               type="text"
               value={newTodo}
               onChange={handleChange}
@@ -293,7 +286,9 @@ export default function Home() {
                               } w-full h-12 mb-2 mt-2 bg-t-c_blue text-t-dg_blue flex items-center ml-3 rounded-t-lg `}
                             >
                               <p
-                                className={`${theme} hover:cursor-crosshair hover:bg-t-hover_blue rounded-lg p-1`}
+                                className={`${theme} hover:cursor-crosshair hover:bg-t-hover_blue rounded-lg p-1
+                                ${todo.completed ? "line-through" : ""}
+                                `}
                                 onClick={() => toggleActive(todo)}
                               >
                                 {todo.content}
