@@ -1,13 +1,9 @@
 "use client";
 
-import { ThemeProvider } from "next-themes";
+import { ThemeProvider } from "@wits/next-themes";
 
 const Providers = ({ children }) => {
-  return (
-    <ThemeProvider enableSystem={false} defaultTheme="themed">
-      <div suppressHydrationWarning={true}>{children}</div>
-    </ThemeProvider>
-  );
+  return <ThemeProvider>{children}</ThemeProvider>;
 };
 
 export default Providers;

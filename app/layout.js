@@ -1,5 +1,6 @@
 import "./globals.css";
 
+import { ServerThemeProvider } from "@wits/next-themes";
 import Providers from "./Providers";
 
 import { Josefin_Sans } from "next/font/google";
@@ -13,10 +14,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="w-screen h-full">
-      <Providers>
-        <body className={`${js.className} w-full h-fit`}>{children}</body>
-      </Providers>
-    </html>
+    <ServerThemeProvider>
+      <html lang="en">
+        <body className={`${js.className} w-full h-fit`}>
+          <Providers>{children}</Providers>
+        </body>
+      </html>
+    </ServerThemeProvider>
   );
 }

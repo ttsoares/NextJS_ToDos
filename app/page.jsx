@@ -5,7 +5,7 @@ import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import { v4 as uuidv4 } from "uuid";
 
 import { useState, useEffect } from "react";
-import { useTheme } from "next-themes";
+import { useTheme } from "@wits/next-themes";
 
 import Image from "next/image";
 import light from "../public/images/icon-sun.svg";
