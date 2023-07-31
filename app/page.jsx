@@ -4,7 +4,7 @@ import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 
 import { v4 as uuidv4 } from "uuid";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useTheme } from "@wits/next-themes";
 
 import Image from "next/image";
@@ -55,8 +55,6 @@ const startTodos = [
 //--------------------------------------------
 export default function Home() {
   const { theme, setTheme } = useTheme("dark");
-
-  const [hasMounted, setHasMounted] = useState(false);
 
   const [newTodo, setNewTodo] = useState("");
 
@@ -161,16 +159,6 @@ export default function Home() {
     setBackTodos([...backTodos, todoObj]);
 
     setNewTodo("");
-  }
-
-  // This did not work to prevent the first load hydration error...
-  // I do not know how to fix it.
-  useEffect(() => {
-    setHasMounted(true);
-  }, []);
-
-  if (!hasMounted) {
-    return null;
   }
 
   return (
